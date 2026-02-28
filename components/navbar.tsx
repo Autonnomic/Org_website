@@ -1,0 +1,76 @@
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+export function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false)
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl md:bg-transparent md:backdrop-blur-none">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Autonnomic Logo"
+            width={112}
+            height={112}
+            className="h-16 w-24 object-contain"
+          />
+        </Link>
+
+        <div className="hidden items-center gap-8 md:flex">
+          <Link href="#about" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            About
+          </Link>
+          <Link href="#services" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            What We Do
+          </Link>
+          <Link href="#industries" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            Industries
+          </Link>
+          <Link href="#culture" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            Culture
+          </Link>
+          <Link href="/contact-sales" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            Contact Us
+          </Link>
+        </div>
+
+
+        <button
+          className="md:hidden text-foreground"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+        >
+          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </nav>
+
+      {mobileOpen && (
+        <div className="border-t border-border/50 bg-background/95 backdrop-blur-xl md:hidden">
+          <div className="flex flex-col gap-4 px-6 py-6">
+            <Link href="#about" className="text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>
+              About
+            </Link>
+            <Link href="#services" className="text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>
+              What We Do
+            </Link>
+            <Link href="#industries" className="text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>
+              Industries
+            </Link>
+            <Link href="#culture" className="text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>
+              Culture
+            </Link>
+            <Link href="/contact-sales" className="text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      )}
+    </header>
+  )
+}
