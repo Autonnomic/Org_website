@@ -1,6 +1,7 @@
 "use client";
 
 import { WavyBackground } from "@/components/ui/wavy-background";
+import { AuroraText } from "@/components/magicui/aurora-text";
 
 const HERO_WAVE_COLORS = ["#0CA4A5", "#0892A5", "#06908F", "#0CA4A5", "#0892A5"];
 const HERO_BG_FILL = "#141B41";
@@ -23,14 +24,16 @@ export function HeroSection() {
             <span className="text-xs font-medium text-primary">Redefining the Daily Grind.</span>
           </div>
 
-          <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-foreground font-serif md:text-6xl lg:text-7xl text-balance">
-            Autonomous AI for
-            <span className="text-primary drop-shadow-[0_0_24px_var(--primary)/50]"> Every Industry</span>
+          <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-foreground font-serif md:text-6xl lg:text-7xl text-balance drop-shadow-sm">
+            Autonomous AI for <AuroraText className="font-serif">Every Industry</AuroraText>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl text-pretty">
-          Autonomic is re-engineering the DNA of productivity. By deploying intelligent 
-          AI ecosystems, we aren't just improving workflows—we’re fundamentally redefining how the world works, from the classroom to the trading floor and beyond.
+          <p className="mt-6 max-w-xl text-lg md:text-xl">
+            <span
+              className="block bg-size-[200%_auto] bg-clip-text text-transparent bg-[linear-gradient(90deg,var(--muted-foreground)_0%,var(--foreground)_25%,var(--primary)_50%,var(--foreground)_75%,var(--muted-foreground)_100%)] animate-[text-shine_4s_ease-in-out_infinite]"
+            >
+              At Autonnomic we increase the standards of every industry with AI
+            </span>
           </p>
         </div>
       </WavyBackground>

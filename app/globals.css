@@ -142,10 +142,10 @@
   100% { background-position: 200% 0; }
 }
 
-/* About section card effects */
+/* About section card effects — border-only glow (opacity pulses the glow layer) */
 @keyframes card-glow-pulse {
-  0%, 100% { opacity: 0.4; box-shadow: 0 0 30px -8px var(--primary); }
-  50% { opacity: 0.8; box-shadow: 0 0 50px -6px var(--primary); }
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
 }
 
 @keyframes card-shine {
@@ -157,4 +157,52 @@
 @keyframes icon-float {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-2px) scale(1.05); }
+}
+
+/* Shiny text - gradient sweep */
+@keyframes text-shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Aurora text - gradient shift */
+@keyframes aurora {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Animated list item - stagger in */
+@keyframes animated-list-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Team section: card enter with scale + fade */
+@keyframes team-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* About section: scroll-triggered fade-in */
+@keyframes about-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

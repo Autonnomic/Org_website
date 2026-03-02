@@ -2,19 +2,16 @@ import Link from "next/link"
 import Image from "next/image"
 import { Twitter, Linkedin, Github, Facebook, Instagram } from "lucide-react"
 
-const footerLinks = ["Products", "Studio", "Clients", "Pricing", "Blog", "Privacy", "Terms"]
+const footerLinks = ["Products", "Privacy Policy", "Terms and Conditions"]
 
 const socialLinks = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Github, href: "https://github.com/Autonnomic", label: "GitHub" },
   { icon: Instagram, href: "https://www.instagram.com/autonnomic/", label: "Instagram" },
 ]
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card">
+    <footer className="bg-card">
       <div className="mx-auto max-w-7xl px-6 py-12">
         {/* Logo and Company Name - Centered */}
         <div className="flex flex-col items-center mb-8">
@@ -48,11 +45,14 @@ export function Footer() {
         {/* Dashed Separator */}
         <div className="border-t border-dashed border-border/50 mb-8"></div>
 
-        {/* Bottom Section */}
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-foreground">
-            &copy; {new Date().getFullYear()} Autonnomic. All rights reserved.
-          </p>
+        {/* Bottom Section - copyright + India flag in middle, social links */}
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-8">
+          <div className="flex items-center justify-center gap-2">
+            <p className="text-sm text-foreground">
+              &copy; {new Date().getFullYear()} Autonnomic. All rights reserved.
+            </p>
+            <span className="text-lg leading-none" aria-hidden title="India">🇮🇳</span>
+          </div>
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => {
               const Icon = social.icon

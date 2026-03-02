@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export function CtaSection() {
   return (
-    <section className="py-24 md:py-32 border-t border-border">
+    <section className="py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="relative overflow-hidden rounded-2xl border border-border bg-card">
           {/* Decorative grid */}
@@ -28,9 +28,8 @@ export function CtaSection() {
               Let autonomous intelligence power your next chapter.
             </h2>
 
-            <p className="max-w-xl text-base leading-relaxed text-muted-foreground text-pretty">
-              Whether you are starting your AI journey or scaling existing solutions,
-              Autonnomic has the platform and expertise to help you succeed.
+            <p className="max-w-md text-muted-foreground">
+              Start or scale your AI journey with Autonnomic.
             </p>
 
             <div className="flex flex-col items-center gap-4 pt-4 sm:flex-row">
