@@ -31,15 +31,18 @@ export function Footer() {
 
         {/* Navigation Links - Horizontal Row */}
         <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
-          {footerLinks.map((link) => (
-            <Link
-              key={link}
-              href="#"
-              className="text-sm text-foreground transition-colors hover:text-primary"
-            >
-              {link}
-            </Link>
-          ))}
+          {footerLinks.map((link) => {
+            const href = link === "Products" ? "#products" : "#";
+            return (
+              <Link
+                key={link}
+                href={href}
+                className="text-sm text-foreground transition-colors hover:text-primary"
+              >
+                {link}
+              </Link>
+            )
+          })}
         </div>
 
         {/* Dashed Separator */}
@@ -51,7 +54,6 @@ export function Footer() {
             <p className="text-sm text-foreground">
               &copy; {new Date().getFullYear()} Autonnomic. All rights reserved.
             </p>
-            <span className="text-lg leading-none" aria-hidden title="India">🇮🇳</span>
           </div>
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => {

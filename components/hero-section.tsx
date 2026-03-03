@@ -21,19 +21,18 @@ export function HeroSection() {
         <div className="flex flex-col items-center text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 shadow-[0_0_24px_-4px_var(--primary)/40] backdrop-blur-sm">
             <div className="h-2 w-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_2px_var(--primary)]" />
-            <span className="text-xs font-medium text-primary">Redefining the Daily Grind.</span>
+            <span className="text-xs font-medium text-primary">
+              AI-powered learning for modern institutions.
+            </span>
           </div>
 
           <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-foreground font-serif md:text-6xl lg:text-7xl text-balance drop-shadow-sm">
-            Autonomous AI for <AuroraText className="font-serif">Every Industry</AuroraText>
+            Autonnomic <AuroraText className="font-serif">LMS</AuroraText>
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg md:text-xl">
-            <span
-              className="block bg-size-[200%_auto] bg-clip-text text-transparent bg-[linear-gradient(90deg,var(--muted-foreground)_0%,var(--foreground)_25%,var(--primary)_50%,var(--foreground)_75%,var(--muted-foreground)_100%)] animate-[text-shine_4s_ease-in-out_infinite]"
-            >
-              At Autonnomic we increase the standards of every industry with AI
-            </span>
+          <p className="mt-6 max-w-2xl text-lg md:text-xl text-muted-foreground">
+            An AI-native learning management system that adapts to every student,
+            gives professors real-time insight, and automates the busywork of running courses.
           </p>
         </div>
       </WavyBackground>

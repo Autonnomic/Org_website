@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   title: 'Autonnomic - AI Applications Transforming Every Industry',
   description: 'Autonnomic builds cutting-edge AI applications that redefine how work is done across every industry. Autonomous intelligence for the future of business.',
   icons: {
-    icon: '/icon.jpg',
-    apple: '/icon.jpg',
+    icon: '/icon.png',
+    apple: '/icon.png',
   },
 }
 

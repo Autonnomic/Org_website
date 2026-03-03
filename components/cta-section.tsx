@@ -21,21 +21,21 @@ export function CtaSection() {
 
           <div className="relative flex flex-col items-center gap-6 px-8 py-16 text-center md:px-16 md:py-24">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5">
-              <span className="text-xs font-medium text-primary">Ready to Transform?</span>
+              <span className="text-xs font-medium text-primary">Ready to see Autonnomic LMS?</span>
             </div>
 
             <h2 className="max-w-3xl text-3xl font-bold tracking-tight text-foreground font-serif md:text-5xl text-balance">
-              Let autonomous intelligence power your next chapter.
+              Bring AI-native learning to your institution.
             </h2>
 
             <p className="max-w-md text-muted-foreground">
-              Start or scale your AI journey with Autonnomic.
+              Book a walkthrough of Autonnomic LMS and explore how it can fit your programs, teams, and learners.
             </p>
 
             <div className="flex flex-col items-center gap-4 pt-4 sm:flex-row">
               <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-secondary gap-2 px-8" asChild>
                 <Link href="/contact-sales">
-                  Contact Sales
+                  Book a demo
                 </Link>
               </Button>
             </div>

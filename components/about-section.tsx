@@ -2,20 +2,21 @@
 
 import { Target, Eye } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
+import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
 
 const cards = [
   {
     id: "mission",
     icon: Target,
     title: "Our Mission",
-    line: "Make work smarter, faster, and more impactful with AI that delivers from day one.",
+    line: "Make education deeply personal and effective by using AI to adapt every learning journey in real time.",
     gradient: "from-primary/25 via-primary/10 to-transparent",
   },
   {
     id: "vision",
     icon: Eye,
     title: "Our Vision",
-    line: "AI in every workflow—unlocking human creativity and productivity at scale.",
+    line: "A world where every institution runs on an LMS that understands its learners, supports its educators, and removes friction from learning.",
     gradient: "from-primary/20 via-primary/5 to-transparent",
   },
 ];
@@ -98,18 +99,28 @@ export function AboutSection() {
       className="relative py-24 md:py-32 overflow-hidden bg-linear-to-b from-[#141B41] to-background"
     >
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-16 text-center">
+        <div
+          className="mb-16 text-center transition-all duration-1000 ease-out"
+          style={{
+            opacity: isInView ? 1 : 0,
+            transform: isInView ? "translateY(0)" : "translateY(2.5rem)",
+          }}
+        >
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-            Who We Are
+            Why Autonnomic LMS
           </span>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground font-serif md:text-5xl text-balance">
-            Where autonomous intelligence meets human ambition.
-          </h2>
+          <div className="mt-4 flex items-center justify-center">
+            <LayoutTextFlip
+              text="Built for"
+              words={["students", "professors"]}
+              duration={2500}
+            />
+          </div>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-          <AboutCard card={cards[0]} isVisible={isInView} delay={0} />
-          <AboutCard card={cards[1]} isVisible={isInView} delay={150} />
+          <AboutCard card={cards[0]} isVisible={isInView} delay={300} />
+          <AboutCard card={cards[1]} isVisible={isInView} delay={700} />
         </div>
       </div>
     </section>

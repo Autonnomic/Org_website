@@ -206,3 +206,27 @@
     transform: translateY(0);
   }
 }
+
+/* Rotating words (vertical slide) */
+@keyframes rt-rotate-word {
+  0% {
+    opacity: 0;
+    transform: translateY(0.35em);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-0.35em);
+  }
+}
+
+.rt-rotate-word {
+  animation: rt-rotate-word 2.2s ease-in-out forwards;
+}

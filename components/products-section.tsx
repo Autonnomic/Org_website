@@ -12,6 +12,21 @@ const features = [
   { icon: Zap, line: "Real-time collaboration across the platform." },
 ];
 
+const steps = [
+  {
+    title: "Onboard",
+    description: "Connect your courses, enroll learners, and plug into your data in days—not months.",
+  },
+  {
+    title: "Learn",
+    description: "Students get adaptive experiences while professors see exactly who needs help.",
+  },
+  {
+    title: "Optimize",
+    description: "Use AI insights to iterate on content, interventions, and outcomes every term.",
+  },
+];
+
 function LMSCard({ item }: { item: (typeof features)[0] }) {
   const Icon = item.icon;
   return (
@@ -35,13 +50,13 @@ export function ProductsSection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 md:mb-16 text-center max-w-2xl mx-auto">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-            Our Product
+            The Platform
           </span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground font-serif md:text-5xl text-balance">
             Autonnomic LMS
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Education reimagined—AI-powered learning that adapts to every student.
+            An AI-native LMS that personalizes learning at scale, amplifies educators, and keeps operations in sync.
           </p>
         </div>
 
@@ -61,14 +76,23 @@ export function ProductsSection() {
                 <LMSCard key={item.line} item={item} />
               ))}
             </AnimatedList>
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-linear-to-t from-background" aria-hidden />
           </div>
         </div>
 
-        <div className="mt-12 rounded-2xl border border-primary/20 bg-linear-to-r from-primary/10 via-primary/5 to-transparent px-6 py-4 text-center">
-          <p className="text-base font-medium text-foreground">
-            Personalized paths · Smarter teaching · Learning at scale
-          </p>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {steps.map((step) => (
+            <div
+              key={step.title}
+              className="rounded-2xl border border-border bg-card/80 p-6 text-left"
+            >
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+                {step.title}
+              </p>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                {step.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

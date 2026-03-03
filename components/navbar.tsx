@@ -24,16 +24,16 @@ export function Navbar() {
 
         <div className="hidden items-center gap-8 md:flex">
           <Link href="#about" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            About
+            Why LMS
           </Link>
           <Link href="#team" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             Team
           </Link>
           <Link href="#products" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Products
+            LMS Features
           </Link>
           <Link href="/contact-sales" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Contact Us
+            Book a Demo
           </Link>
         </div>
 
@@ -51,16 +51,16 @@ export function Navbar() {
         <div className="border-t border-border/50 bg-background/95 backdrop-blur-xl md:hidden">
           <div className="flex flex-col gap-4 px-6 py-6">
             <Link href="#about" className="text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>
-              About
+              Why LMS
             </Link>
             <Link href="#team" className="text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>
               Team
             </Link>
             <Link href="#products" className="text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>
-              Products
+              LMS Features
             </Link>
             <Link href="/contact-sales" className="text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>
-              Contact Us
+              Book a Demo
             </Link>
           </div>
         </div>

@@ -86,13 +86,13 @@ export function TeamSection() {
       className="relative py-24 md:py-32 overflow-hidden"
     >
       <div className="mx-auto max-w-7xl px-6">
-        {/* Header: icon + "Meet Our Team" */}
+        {/* Header: icon + "Team behind Autonnomic LMS" */}
         <div className="mb-12 flex flex-col items-center text-center">
           <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-card">
             <Users2 className="h-6 w-6 text-foreground" />
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Meet Our Team
+            Team behind Autonnomic LMS
           </h2>
         </div>
 

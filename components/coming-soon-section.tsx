@@ -11,10 +11,10 @@ export function ComingSoonSection() {
           </div>
 
           <h2 className="text-2xl font-bold tracking-tight text-foreground font-serif md:text-4xl text-balance max-w-2xl mx-auto">
-            New products launching soon.
+            The Autonnomic LMS roadmap.
           </h2>
           <p className="mt-4 text-muted-foreground max-w-lg mx-auto">
-            We&apos;re building more AI-powered solutions across industries. Stay tuned.
+            We&apos;re shipping advanced analytics, AI mentor experiences, richer collaboration, and more ways to help your learners succeed.
           </p>
         </div>
       </div>
