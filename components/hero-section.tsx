@@ -30,7 +30,7 @@ export function HeroSection() {
             Autonnomic <AuroraText className="font-serif">LMS</AuroraText>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg md:text-xl text-muted-foreground">
+          <p className="mt-6 max-w-2xl text-lg md:text-xl text-white">
             An AI-native learning management system that adapts to every student,
             gives professors real-time insight, and automates the busywork of running courses.
           </p>
