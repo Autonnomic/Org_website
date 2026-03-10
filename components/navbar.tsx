@@ -26,9 +26,6 @@ export function Navbar() {
           <Link href="#about" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             Why LMS
           </Link>
-          <Link href="#team" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Team
-          </Link>
           <Link href="#products" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             LMS Features
           </Link>
