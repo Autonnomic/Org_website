@@ -16,6 +16,7 @@ export default function ContactSalesPage() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    email: "",
     companyName: "",
     inquiry: "",
   })
@@ -34,6 +35,7 @@ export default function ContactSalesPage() {
       const formDataToSend = new FormData()
       formDataToSend.append("firstName", formData.firstName)
       formDataToSend.append("lastName", formData.lastName)
+      formDataToSend.append("email", formData.email)
       formDataToSend.append("companyName", formData.companyName)
       formDataToSend.append("inquiry", formData.inquiry)
 
@@ -48,6 +50,7 @@ export default function ContactSalesPage() {
         setFormData({
           firstName: "",
           lastName: "",
+          email: "",
           companyName: "",
           inquiry: "",
         })
@@ -128,6 +131,20 @@ export default function ContactSalesPage() {
                     placeholder="Doe"
                   />
                 </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="email">Work email</Label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  autoComplete="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="you@company.com"
+                />
               </div>
 
               <div className="space-y-2">
