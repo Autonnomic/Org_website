@@ -12,7 +12,7 @@ interface AuroraTextProps {
 export function AuroraText({
   className,
   children,
-  colors = ["#06908F", "#0892A5", "#0CA4A5", "#38bdf8", "#06908F"],
+  colors = ["#22d3ee", "#a78bfa", "#06b6d4", "#c084fc", "#22d3ee"],
   speed = 1,
 }: AuroraTextProps) {
   const duration = 4 / speed;
