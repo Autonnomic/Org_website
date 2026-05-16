@@ -12,7 +12,7 @@
  * - RESEND_FROM=Autonnomic <hello@autonnomic.com>
  * - RESEND_TO can be any team addresses on that domain.
  */
-const DEFAULT_SANDBOX_TO = "sreekarreddy299@gmail.com"
+const DEFAULT_SANDBOX_TO = "veerasreekar@autonnomic.com"
 const DEFAULT_FROM = "Autonnomic <onboarding@resend.dev>"
 
 export async function sendContactEmail(formData: FormData) {
